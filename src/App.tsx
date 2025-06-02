@@ -2,6 +2,7 @@ import { Routes, Route, Link } from "react-router-dom"
 import RecipesSearcher from "./pages/RecipesSearcher"
 import Profile from "./pages/Profile"
 import Recipe from "./pages/Recipe"
+import NotFound from "./pages/NotFound"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<RecipesSearcher />}></Route>
         <Route path="/recipe/:slug" element={<Recipe   />}></Route>
         <Route path="/profile" element={<Profile />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </div>
   )
